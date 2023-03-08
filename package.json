@@ -1,0 +1,23 @@
+{
+  "name": "coin-collector",
+  "version": "1.0.0",
+  "description": "A full stack application using Node.js, Mongoose, Express and EJS to allow coin collectors to list all of the coins in their collection.  Users will be able to add, edit and delete items.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Amanda-Barlow/Coin-Collector.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Amanda-Barlow/Coin-Collector/issues"
+  },
+  "homepage": "https://github.com/Amanda-Barlow/Coin-Collector#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
