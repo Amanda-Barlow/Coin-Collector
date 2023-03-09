@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Edit A Coin</title>
+        <link rel="stylesheet" href="/css/style.css">
+    </head>
+    <body>
+      <h1>Edit Coin Page</h1>
+      <form action="/coin/<%=index%>?_method=PUT" method="POST">
+        <label for="name">Name</label>
+        <input type="text" name="name" id="name" value="<%=coin.name%>"/>
+
+        <label for="denom">Denomination</label>
+        <input type="text" name="denomination" id="denomination" value="<%=coin.denomination%>"/>
+        
+        <label for="year">Year</label>
+        <input type="number" name="year" id="year" value="<%=coin.year%>"/>
+        
+        <label for="worth">Worth</label>
+        <input type="number" name="worth" id="worth" value="<%=coin.worth%>"/>
+        
+        <label for="tags">Notable Characteristics</label>
+        <input type="text" name="tags" id="tags" value="<%=coin.tags%>"/>
+
+        <input type="submit" value="Edit Coin">
+      </form>
+    </body>
+</html>

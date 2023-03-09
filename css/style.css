@@ -1,0 +1,60 @@
+
+@import url();
+
+body {
+  background-color:#cfe0c3;
+  margin: 0;
+  font-family:Georgia, 'Times New Roman', Times, serif;
+}
+
+h1 {
+  font-family:Impact, Haettenschweiler, 'Arial Narrow', sans-serif;
+  background-color: #40798c;
+  font-size: 40px;
+  margin-bottom: 1em;
+  padding: 1em;
+  text-align: center;
+}
+
+a {
+  color: #b7094c;
+  text-decoration: none;
+  text-shadow: 1px 1px 1px #1f363d;
+  font-size: 20px;
+  padding: .25em;
+  margin: 1em;
+}
+
+a:hover {
+  color: ghostwhite;
+}
+
+li {
+  color: #b7094c;
+  text-decoration: none;
+  text-shadow: 1px 1px 1px #1f363d;
+  font-size: 20px;
+  padding: .25em;
+  margin: 1em;
+}
+
+li a {
+  color: #40798c;
+}
+tr {
+  color: #1f363d;
+  text-align: left;
+  font-size: 20px;
+
+}
+input[type=text] {
+  padding: .3em;
+}
+
+input[type=submit] {
+  padding: .3em;
+  color: #40798c;
+  background: mediumseagreen;
+  font-size: 1em;
+  border-radius: 10%;
+}

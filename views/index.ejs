@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Coin Collector</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <nav>
+        <a href="/coins/new">Add A Coin To Your Collection</a>
+    </nav>
+    <h1>Coins Index Page</h1>
+    <ul>
+        <% for(let i=0; i<allCoins.length; i++) %>
+            <li>
+                <a href="/coins/<%=i%>"> <%=allCoins[i].name %> </a>
+                <!--ADD DELETE FORM HERE-->
+                <!-- <form action="/coin/<%=i%>?_method=DELETE" method="POST">
+                    <input type="submit" value="DELETE"/> -->
+                </form>
+                <a href="/coin/<%=i%>/edit">Edit This Coin<%=coins[i].name %></a>
+            </li>
+       <%}%>
+    </ul>
+</body>
+</html>
