@@ -1,9 +1,18 @@
 require('dotenv').config()
 const express = require('express')
 const app = express();
+const mongoose = require('mongoose')
 
 //VARIABLES
 const PORT = process.env.PORT || 3000;
+
+//MONGODB ATLAS Connection
+mongoose.connect(process.env.DATABASE_URL)
+
+const db = mongoose.connection
+db.on('error', (error) => console.log(error.message + ' is Mongo not running?'))
+db.on('connected',() => console.log('Mongo is connected and running'))
+db.on('disconnected', () => console.log('Mongo is disconnected'))
 
 // const methodOverride = require('method-override')
 const coins = require('./models/coin.js');
