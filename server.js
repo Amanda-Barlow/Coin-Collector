@@ -1,10 +1,9 @@
-require('dotenv').config()
 const express = require('express')
 const app = express();
 const mongoose = require('mongoose')
 const methodOverride = require('method-override')
 const coins = require('./models/coin.js');
-
+require('dotenv').config()
 //VARIABLES
 const PORT = process.env.PORT || 3000;
 
