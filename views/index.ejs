@@ -10,19 +10,24 @@
         <a href="/coins/new">Add A Coin To Your Collection</a>
     </nav>
     <h1>Coins Index Page</h1>
-    <ul>
+    <table>
         <% for (let i=0; i < coins.length; i++) { %>
-            <li>
-                <a href='/coins/<%=coins[i].id; %>'> 
-                    <%=coins[i].name %>
-                </a>
-                <!-- ADD DELETE FORM HERE-->
-            <form action="/coin/<%=i%>?_method=DELETE" method="POST">
-                <input type="submit" value="DELETE"/>
-            </form>
-                <a href="/coins/<%=i%>/edit">Edit This Coin<%=coins[i].name %></a>
-            </li>
+            <tr>
+            <td>
+            <th scope= "row"><a href='/coins/<%=coins[i].id; %>'><%= coins[i].name %></a>
+            </td>
+            </th>
+            <td>
+                    <!-- ADD DELETE FORM HERE-->
+            <th scope= "row"><input type="submit" value="DELETE"/>
+            </td>
+            </th>
+            <td>
+            <th scope= "row"></form><a href="/coins/<%=i%>/edit"> Edit This Coin <%=coins[i] %></a>
+            </td>
+            </th>
+            </tr>
        <%}%>
-    </ul>
+    </table>
 </body>
 </html>
