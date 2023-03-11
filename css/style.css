@@ -1,9 +1,15 @@
+@import url('https://fonts.googleapis.com/css?family=Comfortaa%7CRighteous');
+
 body {
   background-color:#cfe0c3;
   margin: 0;
   font-family:Georgia, 'Times New Roman', Times, serif;
 }
-
+tr {
+  color: #1f363d;
+  text-align: left;
+  font-size: 20px;
+}
 h1 {
   font-family:Impact, Haettenschweiler, 'Arial Narrow', sans-serif;
   background-color: #40798c;
@@ -38,12 +44,7 @@ li {
 li a {
   color: #40798c;
 }
-tr {
-  color: #1f363d;
-  text-align: left;
-  font-size: 20px;
 
-}
 input[type=text] {
   padding: .3em;
 }

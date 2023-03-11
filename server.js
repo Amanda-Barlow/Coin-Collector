@@ -32,14 +32,14 @@ app.post('coins', (req, res)=>{
 })
 
 //INDEX 
-app.get('/coins', (req, res) => {
+app.get('/coins/', (req, res) => {
         res.render('index.ejs', {
             coins: coins
         })
     })
 
 //NEW
-app.get('/coins/new', (req, res)=>{
+app.get('/coins/new', (req, res) => {
     res.render('new.ejs', {
     })
 })
