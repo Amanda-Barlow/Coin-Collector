@@ -2,17 +2,17 @@ require('dotenv').config()
 const express = require('express')
 const app = express();
 const mongoose = require('mongoose')
+const methodOverride = require('method-override')
+const coins = require('./models/coin.js');
 
 //VARIABLES
 const PORT = process.env.PORT || 3000;
 
 //MIDDLEWARE
-//Body Parser middleware: gives us access to req.body
-app.use(express.urlencoded({extended: true})) 
-//Body parser: Add JSON data from request to the request object
+app.use(express.static('public'))
 app.use(express.json())
-
-// app.use(methodOverride('_method'))
+app.use(express.urlencoded({extended: true})) 
+app.use(methodOverride('_method'))
 
 //MONGODB ATLAS Connection
 mongoose.connect(process.env.DATABASE_URL)
@@ -23,7 +23,7 @@ db.on('connected',() => console.log('Mongo is connected and running'))
 db.on('disconnected', () => console.log('Mongo is disconnected'))
 
 // const methodOverride = require('method-override')
-const coins = require('./models/coin.js');
+
 
 //ROUTES GO HERE
 app.post('coins', (req, res)=>{
