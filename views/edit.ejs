@@ -7,21 +7,21 @@
     </head>
     <body>
       <h1>Edit Coin Page</h1>
-      <form action="/coin/<%=index%>?_method=PUT" method="POST">
+      <form action="/coins/<%=index%>?_method=PUT" method="POST">
         <label for="name">Name</label>
-        <input type="text" name="name" id="name" value="<%=coin.name%>"/>
+        <input type="text" name="name" id="name" value="<%=coins.name%>"/>
 
         <label for="denom">Denomination</label>
-        <input type="text" name="denomination" id="denomination" value="<%=coin.denomination%>"/>
+        <input type="text" name="denomination" id="denomination" value="<%=coins.denomination%>"/>
         
         <label for="year">Year</label>
-        <input type="number" name="year" id="year" value="<%=coin.year%>"/>
+        <input type="number" name="year" id="year" value="<%=coins.year%>"/>
         
         <label for="worth">Worth</label>
-        <input type="number" name="worth" id="worth" value="<%=coin.worth%>"/>
+        <input type="number" name="worth" id="worth" value="<%=coins.worth%>"/>
         
         <label for="tags">Notable Characteristics</label>
-        <input type="text" name="tags" id="tags" value="<%=coin.tags%>"/>
+        <input type="text" name="tags" id="tags" value="<%=coins.tags%>"/>
 
         <input type="submit" value="Edit Coin">
       </form>

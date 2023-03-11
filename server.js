@@ -6,6 +6,14 @@ const mongoose = require('mongoose')
 //VARIABLES
 const PORT = process.env.PORT || 3000;
 
+//MIDDLEWARE
+//Body Parser middleware: gives us access to req.body
+app.use(express.urlencoded({extended: true})) 
+//Body parser: Add JSON data from request to the request object
+app.use(express.json())
+
+// app.use(methodOverride('_method'))
+
 //MONGODB ATLAS Connection
 mongoose.connect(process.env.DATABASE_URL)
 
@@ -15,19 +23,18 @@ db.on('connected',() => console.log('Mongo is connected and running'))
 db.on('disconnected', () => console.log('Mongo is disconnected'))
 
 // const methodOverride = require('method-override')
-const coins = require('./models/coin.js');
+const coins = require('./models/coins.js');
 
-
-
-app.use(express.static('public'))
-app.use(express.json())
-app.use(express.urlencoded({extended: true})) 
-// app.use(methodOverride('_method'))
+//ROUTES GO HERE
+app.post('coins', (req, res)=>{
+    console.log(req.body)
+    res.send(req.body)
+})
 
 //INDEX 
-app.get('/coins', (req, res) =>{
+app.get('/coins', (req, res) => {
         res.render('index.ejs', {
-            allCoins: coins
+            coins: coins
         })
     })
 
@@ -37,11 +44,11 @@ app.get('/coins/new', (req, res)=>{
     })
 })
 
-// //DELETE
-// app.delete('/coins/:index', (req, res) => {
-// 	coins.splice(req.params.index, 1)
-// 	res.redirect('/coins')
-// })
+//DELETE
+app.delete('/coins/:index', (req, res) => {
+	coins.splice(req.params.index, 1)
+	res.redirect('/coins')
+})
 
 //UPDATE
 app.put('/coins/:index', (req, res) =>{
@@ -54,6 +61,7 @@ app.post('/coins', (req, res)=>{
     coins.push(req.body)
     res.redirect('/coins')
 })
+
 //EDIT
 app.get('/coins/:index/edit', (req, res)=>{
 	res.render('edit.ejs', { 
@@ -61,6 +69,7 @@ app.get('/coins/:index/edit', (req, res)=>{
 			index: req.params.index
 	})
 })
+
 //SHOW
 app.get('/coins/:id', (req, res)=>{
     res.render('show.ejs', {
