@@ -10,20 +10,21 @@
       <form action="/coins/<%=index%>?_method=PUT" method="POST">
         <label for="name">Name</label>
         <input type="text" name="name" id="name" value="<%=coins.name%>"/>
-
+ <br>
         <label for="denom">Denomination</label>
         <input type="text" name="denomination" id="denomination" value="<%=coins.denomination%>"/>
-        
+ <br>       
         <label for="year">Year</label>
         <input type="number" name="year" id="year" value="<%=coins.year%>"/>
-        
+ <br>       
         <label for="worth">Worth</label>
         <input type="number" name="worth" id="worth" value="<%=coins.worth%>"/>
-        
+ <br>       
         <label for="tags">Notable Characteristics</label>
         <input type="text" name="tags" id="tags" value="<%=coins.tags%>"/>
-
+ <br>
         <input type="submit" value="Edit Coin">
       </form>
+    <button><a href="/coins/">Back</a></button>
     </body>
 </html>

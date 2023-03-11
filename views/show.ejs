@@ -4,20 +4,24 @@
 <head>
     <meta charset="UTF-8">
     <title>Coin Collector</title>
-<link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/style.css">
 </head>
-
 <body>
-    <h1>Coins Show Page</h1>
-    <h2><%=coins.name%></h2>
-    <h3><%=coins.denomination%></h3>
-    <h3><%=coins.year%></h3>
-    <h3><%=coins.worth%></h3>
-    <h3><%=coins.tags%></h3>
-    <img src="<%=coins.img%>" alt="<%=coins.name%>">
-    <a href="/coins">Back to Index Page</a>
+    <nav>
+        <a href="/coins/"></a>
+    </nav>
+    <div container=
+    <ul>
+        <h2><%=coins.name%></h2>
+        <h3>Denomination: <%= coins.denomination %></h3>
+        <h3>Year: <%= coins.year %></h3>
+        <h3>Worth: <%= coins.worth %></h3>
+        <h3>Unique Identifiers: <%= coins.tags %></h3>
+    </ul>
+</div>
+<br>
+<button><a href="/coins/">Back</a></button>
 </body>
-
 </html>
 
 

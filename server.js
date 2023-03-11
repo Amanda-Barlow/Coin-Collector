@@ -23,7 +23,7 @@ db.on('connected',() => console.log('Mongo is connected and running'))
 db.on('disconnected', () => console.log('Mongo is disconnected'))
 
 // const methodOverride = require('method-override')
-const coins = require('./models/coins.js');
+const coins = require('./models/coin.js');
 
 //ROUTES GO HERE
 app.post('coins', (req, res)=>{

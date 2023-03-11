@@ -14,7 +14,7 @@
         <% for (let i=0; i < coins.length; i++) { %>
             <tr>
             <td>
-            <th scope= "row"><a href='/coins/<%=coins[i].id; %>'><%= coins[i].name %></a>
+            <th scope= "row"><a href='/coins/<%=i%>'><%=coins[i].name%></a>
             </td>
             </th>
             <td>
@@ -23,7 +23,7 @@
             </td>
             </th>
             <td>
-            <th scope= "row"></form><a href="/coins/<%=i%>/edit"> Edit This Coin <%=coins[i] %></a>
+            <th scope= "row"></form><a href="/coins/<%=i%>/edit"> Edit This Coin </a>
             </td>
             </th>
             </tr>
