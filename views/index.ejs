@@ -9,7 +9,8 @@
             </th>
             <td>
                     <!-- ADD DELETE FORM HERE-->
-            <th scope= "row"><input type="submit" value="DELETE"/>
+            <th scope= "row"><form action="/coins/<%=coins[i].id%>?_method=DELETE" method="POST">
+                    <input type="submit" value="Delete">
             </td>
             </th>
             <td>
