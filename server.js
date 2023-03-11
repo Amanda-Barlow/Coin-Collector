@@ -1,8 +1,13 @@
+require('dotenv').config()
 const express = require('express')
 const app = express();
+
+//VARIABLES
+const PORT = process.env.PORT || 3000;
+
 // const methodOverride = require('method-override')
 const coins = require('./models/coin.js');
-const port= 3000;
+
 
 
 app.use(express.static('public'))
@@ -54,6 +59,6 @@ app.get('/coins/:id', (req, res)=>{
     })
 })
 
-app.listen(port, ()=>{
-    console.log('Listening on port ', port)
+app.listen(PORT, ()=>{
+    console.log('Listening on port ', PORT)
 })
