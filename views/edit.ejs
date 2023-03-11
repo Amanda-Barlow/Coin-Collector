@@ -1,11 +1,4 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        <title>Edit A Coin</title>
-        <link rel="stylesheet" href="/css/style.css">
-    </head>
-    <body>
+<%- include('./partials/header.ejs') %>
       <h1>Edit Coin Page</h1>
       <form action="/coins/<%=index%>?_method=PUT" method="POST">
         <label for="name">Name</label>
@@ -26,5 +19,4 @@
         <input type="submit" value="Edit Coin">
       </form>
     <button><a href="/coins/">Back</a></button>
-    </body>
-</html>
+<%- include('./partials/footer.ejs') %>

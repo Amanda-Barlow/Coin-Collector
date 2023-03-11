@@ -5,9 +5,10 @@ body {
 }
 
 h1 {
-  font-family:Impact, Haettenschweiler, 'Arial Narrow', sans-serif;
+  font-family:'Times New Roman', Times, serif;
   background-color: #386641;
-  font-size: 40px;
+  color:#cfe0c3 ;
+  font-size: 60px;
   margin-bottom: 1em;
   padding: 1em;
   text-align: center;

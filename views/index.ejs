@@ -1,15 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Coin Collector</title>
-    <link rel="stylesheet" href="/css/style.css">
-</head>
-<body>
-    <nav>
-        <a href="/coins/new">Add A Coin To Your Collection</a>
-    </nav>
-    <h1>Coins Index Page</h1>
+<%- include('./partials/header.ejs') %>
+    <h1>$ COIN COLLECTOR $</h1>
     <table>
         <% for (let i=0; i < coins.length; i++) { %>
             <tr>
@@ -29,5 +19,4 @@
             </tr>
        <%}%>
     </table>
-</body>
-</html>
+<%- include('./partials/footer.ejs') %>

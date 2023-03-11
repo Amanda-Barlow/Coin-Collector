@@ -1,16 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <title>Coin Collector</title>
-    <link rel="stylesheet" href="/css/style.css">
-</head>
-<body>
-    <nav>
-        <a href="/coins/"></a>
-    </nav>
-    <div container=
+<%- include('./partials/header.ejs') %>
+<div container=
     <ul>
         <h2><%=coins.name%></h2>
         <h3>Denomination: <%= coins.denomination %></h3>
@@ -21,7 +10,5 @@
 </div>
 <br>
 <button><a href="/coins/">Back</a></button>
-</body>
-</html>
-
+<%- include('./partials/footer.ejs') %>
 
