@@ -31,6 +31,16 @@ app.post('/coins', (req, res)=>{
     })
 })
 
+//INDEX 
+app.get('/coins', (req, res) => {
+    Coin.find({}, (err, foundCoin) => {
+        if (err) {console.log(err.message)}
+        res.render('index.ejs', {
+            coins: foundCoin
+        })
+    })
+})
+
 //NEW
 app.get('/coins/new', (req, res) => {
     res.render('new.ejs', {
