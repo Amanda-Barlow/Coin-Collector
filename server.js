@@ -47,6 +47,60 @@ app.get('/coins/new', (req, res) => {
     })
 })
 
+//DELETE
+app.delete('/coins:id', (req, res)=> {
+    Coin.findByIdAndDelete(req.params.id, (err, deletedCoin)=>{
+        if(err) {
+            console.log(err)
+            res.send(err)
+        }else {
+            console.log(deletedCoin)
+            res.redirect('/coins')
+        }
+    })
+})
+
+//UPDATE
+app.put('/coins:id', (req, res)=> {
+    Coin.findByIdAndUpdate(req.params.id, req.body, {new:true,},
+        (err, updatedCoin)=>{
+            if(err){
+                console.log(err)
+            }else{
+                console.log(updatedCoin)
+                res.redirect('/coins')
+            }
+        })
+})
+
+//CREATE
+app.post('/coins', (req, res)=>{
+    Coin.create(req.body, (error, createdCoin) => {
+        console.log(createdCoin, 'CREATED COIN')
+        res.redirect('/coins')
+    })
+})
+
+//EDIT
+app.get('/coins:id/edit', (req, res) =>{
+    if(err) {
+        console.log(err)
+        res.send(err)
+    }else{
+        res.render('edit.ejs', {
+            coin: foundCoin
+        })
+    }
+})
+
+app.get('/coins', (req, res)=>{
+    Coin.findById(req.params.id, (err, foundCoin)=>{
+        if(err){console.lof(err.message)}
+        res.render('show.ejs', {
+            coin: foundCoin
+        })
+    })
+})
 app.listen(PORT, ()=>{
     console.log('Listening on port ', PORT)
 })
