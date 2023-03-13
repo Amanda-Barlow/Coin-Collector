@@ -1,9 +1,10 @@
+require('dotenv').config()
 const express = require('express')
 const app = express();
 const mongoose = require('mongoose')
 const methodOverride = require('method-override')
-const coins = require('./models/coin.js');
-require('dotenv').config()
+const Coin = require('./models/coin');
+
 //VARIABLES
 const PORT = process.env.PORT || 3000;
 
@@ -21,13 +22,11 @@ db.on('error', (error) => console.log(error.message + ' is Mongo not running?'))
 db.on('connected',() => console.log('Mongo is connected and running'))
 db.on('disconnected', () => console.log('Mongo is disconnected'))
 
-// const methodOverride = require('method-override')
-
-
 //ROUTES GO HERE
-app.post('coins', (req, res)=>{
-    console.log(req.body)
-    res.send(req.body)
+app.post('/coins', (req, res)=>{
+    Coin.create(req.body, (error, createdCoin)=>{
+        res.send(createdCoin);
+    })
 })
 
 //INDEX 
@@ -44,9 +43,17 @@ app.get('/coins/new', (req, res) => {
 })
 
 //DELETE
-app.delete('/coins/:index', (req, res) => {
-	coins.splice(req.params.index, 1)
-	res.redirect('/coins')
+app.delete('/:id', (req, res) => {
+	Coin.findByIdAndDelete(req.params.id, (err, 
+	deletedCoins) =>{
+		if(err) {
+			console.log(err)
+			res.send(err)
+		} else {
+			console.log(deletedCoins)
+			res.redirect('/coins')
+		}
+	})
 })
 
 //UPDATE
