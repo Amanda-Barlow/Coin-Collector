@@ -93,14 +93,16 @@ app.get('/coins:id/edit', (req, res) =>{
     }
 })
 
-app.get('/coins', (req, res)=>{
-    Coin.findById(req.params.id, (err, foundCoin)=>{
-        if(err){console.lof(err.message)}
+//SHOW
+app.get('/coins/:id', (req, res) => {
+    Coin.findById(req.params.id, (err, foundCoin) => {
+        if(err){console.log(err.message)}
         res.render('show.ejs', {
             coin: foundCoin
         })
     })
 })
+
 app.listen(PORT, ()=>{
     console.log('Listening on port ', PORT)
 })
