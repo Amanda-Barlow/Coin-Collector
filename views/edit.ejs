@@ -1,7 +1,7 @@
 <%- include('./partials/header.ejs') %>
 <h1>Edit <%=coin.name%></h1>
 
-<form action='/coin/<%= coin.id %>?_method= PUT' method='POST'>
+<form action='/coins/<%= coin.id %>?_method=PUT' method='POST'>
         Name: <input type='text' name='name' value='<%=coin.name%>'/>
  <br>
        Denomination: <input type='text' name='denomination' value='<%=coin.denomination%>'/>
