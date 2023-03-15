@@ -54,15 +54,14 @@ router.post('/', (req, res)=>{
 })
 
 //EDIT
-router.get('/:id/edit', (req, res) =>{
-    if(err) {
-        res.send(error)
-    }else{
+router.get('/:id/edit', (req, res) => {
+    Coin.findById(req.params.id, (err, foundCoin) => {
         res.render('edit.ejs', {
             coin: foundCoin
+            })
         })
-    }
-})
+    })
+
 
 //SHOW
 router.get('/:id', (req, res) => {

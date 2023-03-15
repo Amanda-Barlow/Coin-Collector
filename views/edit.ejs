@@ -1,22 +1,17 @@
 <%- include('./partials/header.ejs') %>
-<h1>Edit Coin Page</h1>
-<form action='/coins/<%=index%>?_method=PUT' method='POST'>
-        <label for='name'>Name</label>
-        <input type='text' name='name' id='name' value='<%=coins.name%>'/>
+<h1>Edit <%=coin.name%></h1>
+
+<form action='/coin/<%= coin.id %>?_method= PUT' method='POST'>
+        Name: <input type='text' name='name' value='<%=coin.name%>'/>
  <br>
-        <label for='denom'>Denomination</label>
-        <input type='text' name='denomination' id='denomination' value='<%=coins.denomination%>'/>
+       Denomination: <input type='text' name='denomination' value='<%=coin.denomination%>'/>
  <br>       
-        <label for='year'>Year</label>
-        <input type='number' name='year' id='year' value='<%=coins.year%>'/>
+       Year: <input type='number' name='year' value='<%=coin.year%>'/>
  <br>       
-        <label for='worth'>Worth</label>
-        <input type='number' name='worth' id='worth' value='<%=coins.worth%>'/>
+        Worth: <input type='number' name='worth' value='<%=coin.worth%>'/>
  <br>       
-        <label for='tags'>Notable Characteristics</label>
-        <input type='text' name='tags' id='tags' value='<%=coins.tags%>'/>
+       Notable Characteristics: <input type='text' name='tags' value='<%=coin.tags%>'/>
  <br>
         <input type='submit' value='Edit Coin'>
-      </form>
-    <button><a href='/coins/''>Back</a></button>
+</form>
 <%- include('./partials/footer.ejs') %>
