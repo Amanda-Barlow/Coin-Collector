@@ -8,10 +8,12 @@ body {
   margin: 0;
   font-family:Georgia, 'Times New Roman', Times, serif;
 }
+
 div {
   text-align: right;
   align-items: right;
 }
+
 h1 {
   font-family:'Times New Roman', Times, serif;
   background-color: #386641;
