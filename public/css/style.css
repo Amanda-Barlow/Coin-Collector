@@ -8,7 +8,10 @@ body {
   margin: 0;
   font-family:Georgia, 'Times New Roman', Times, serif;
 }
-
+div {
+  text-align: right;
+  align-items: right;
+}
 h1 {
   font-family:'Times New Roman', Times, serif;
   background-color: #386641;
@@ -54,7 +57,7 @@ input[type=text] {
   padding: .3em;
 }
 
-input[type=submit] {
+input[type=submit], button {
   padding: .3em;
   color: #386641;
   background: #A7C957;

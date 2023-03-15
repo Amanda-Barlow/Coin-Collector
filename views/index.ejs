@@ -8,17 +8,20 @@
             </td>
             </th>
             <td>
-                    <!-- ADD DELETE FORM HERE-->
-    <form action='/coins/<%=coins[i].id%>?_method=DELETE' method='POST'>
-    <input type='submit' value='Delete'>
-    </form>
+            <th scope= 'row'><a href='/coins/<%=coins[i].id%>/edit'> Edit Coin </a>
             </td>
             </th>
-            <td>
-            <th scope= 'row'></form><a href='/coins/<%=coins[i].id%>/edit'> Edit This Coin </a>
-            </td>
-            </th>
-            </tr>
+           
+    <!-- ADD DELETE FORM HERE-->
+    <div>
+    <td>
+        <th scope= 'row'><form action='/coins/<%=coins[i].id%>?_method=DELETE' method='POST'>
+        <input type='submit' value='Delete'>
+        </form>
+        </td>
+        </th>
+    </div>
+        </tr>
        <%}%>
     </table>
 <%- include('./partials/footer.ejs') %>
