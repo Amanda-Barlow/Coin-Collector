@@ -1,4 +1,5 @@
-const mongoose = require('mongoose')
+const mongoose = require('mongoose');
+
 const coinSchema = new mongoose.Schema({
     name: {type: String, required: true},
     denomination: {type: String, required: false},
@@ -6,5 +7,7 @@ const coinSchema = new mongoose.Schema({
     worth: {type: Number, required: false},
     tags: {type: String, required: false},
 })
-const Coin = mongoose.model("Coin", coinSchema);
-module.exports = Coin
+
+const Coin = mongoose.model('Coin', coinSchema);
+
+module.exports = Coin;

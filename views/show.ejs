@@ -1,13 +1,12 @@
 <%- include('./partials/header.ejs') %>
-    <ul>
-        <h2> <%= coin.name %></h2>
-        <h3>Denomination: <%= coin.denomination; %></h3>
-        <h3>Year: <%= coin.year; %></h3>
-        <h3>Worth: <%= coin.worth; %></h3>
-        <h3>Unique Identifiers: <%= coin.tags; %></h3>
-    </ul>
+
+Name: <%=coin.name%>
+Denomination: <%=coin.denomination%>
+Year: <%=coin.year%>
+Worth: <%=coin.worth%>
+Unique Identifiers: <%=coin.tags%>
 
 <br>
-<button><a href="/coins/">Back</a></button>
-<%- include('./partials/footer.ejs') %>
+<button><a href='/coins/''>Back</a></button>
 
+<%- include('./partials/footer.ejs') %>

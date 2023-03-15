@@ -1,22 +1,22 @@
 <%- include('./partials/header.ejs') %>
 <h1>Add A Coin</h1>
-      <form action="/coins" method="POST">
-        <label for="name">Name</label>
-        <input type="text" name="name" id="name"/>
+      <form action='/coins' method='POST'>
+        <label for='name'>Name</label>
+        <input type='text' name='name' id='name'/>
 <br>
-        <label for="denom">Denomination</label>
-        <input type="text" name="denomination" id="denomination"/>
+        <label for='denomination'>Denomination</label>
+        <input type='text' name='denomination' id='denomination'/>
  <br>       
-        <label for="year">Year</label>
-        <input type="number" name="year" id="year"/>
+        <label for='year'>Year</label>
+        <input type='number' name='year' id='year'/>
  <br>       
-        <label for="worth">Worth</label>
-        <input type="number" name="worth" id="worth"/>
+        <label for='worth'>Worth</label>
+        <input type='number' name='worth' id='worth'/>
   <br>      
-        <label for="tags">Notable Characteristics</label>
-        <input type="text" name="tags" id="tags"/>
+        <label for='tags'>Notable Characteristics</label>
+        <input type='text' name='tags' id='tags'/>
 <br>
-        <input type="submit" value="Add Coin">
+        <input type='submit' value='Add Coin'>
       </form>
-    <button><a href="/coins/">Back</a></button>
+    <button><a href='/coins/''>Back</a></button>
 <%- include('./partials/footer.ejs') %>
