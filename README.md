@@ -8,25 +8,37 @@ As a user, I want to catalog my coin collection into a single place
 As a user, I want to display details of each coin
 As a user, I want to be able to identify unique aspects of the coins (ie date, markings, errors etc)
 As a user, I want to be able to edit the details of each item
-As a user I want to be able to add new coins to my collection
+As a user, I want to be able to add new coins to my collection
 As a user, I want to be able to delete items from my collection
 
 MVP Goals
-Coin Collector will catalog coin collection including name of coin, year, design, unique characteristics
-Adhere to the MVC file structure: Models, Views, Controllers
+Full Stack Application using Node.JS, Mongoose, Express, Express JS
+MVC File Structure - 
+    Models - coin.js
+    Views - partials (header and footer), edit.ejs, index.ejs, new.ejs, show.ejs
+    Controller - coins.js
 One model with the seven restful routes:
 -Index - Lists the coins in the collection
 -New - Allows the user to add a new coin
 -Delete - Remove coins from the collection
--Update - Update the route
--Create - Allows the creator to make a
--Edit - Edit the route
+-Update - Allows the developer to update the route
+-Create - Allows the developer to add to the database
+-Edit - Allows the user to change the coin information
 -Show - Display the details about each coin in the collection
 
+Full CRUD
+- Able to Create, Read, Update, and Delete
+
+Application is in developers Git Hub repository with frequent commits to track progress
+- github.com/Amanda-Barlow/Coin-Collector
+
 Stretch Goals
-Database will include photos of some of the coins, but have the ability to not have all coins with a picture
-To allow user to sign in and save their information
-To allow the user or others to give input or feedback about the coin
+- Developer added css to make page look professional and enhance the user experience
+- Develop was able to use ejs partials
+
+- Developer will continue to work on adding photos of some of the coins, but have the ability to not have all coins with a picture
+- Developer will continue to work on allowing user to sign in and save their information
+- Developer will continue to work on allowing the user or others to give input or feedback about the coin
 ￼
 ￼
 ￼
