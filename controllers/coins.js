@@ -73,14 +73,4 @@ router.get('/:id', (req, res) => {
     })
 })
 
-//GALLERY
-router.get('/:id/gallery', (req, res) => {
-    Coin.findById(req.params.id, (err, foundCoin) => {
-        if(err){console.log(err.message)}
-        res.render('gallery.ejs', {
-            coin: foundCoin
-        })
-    })
-})
-
 module.exports = router
