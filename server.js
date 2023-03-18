@@ -15,7 +15,10 @@ console.log(SESSION_SECRET)
 //MONGODB ATLAS Connection
 const mongoose = require('mongoose')
 mongoose.set('strictQuery', false)
-mongoose.connect(process.env.DATABASE_URI)
+const MONGODB_URI = process.env.MONGODB_URI;
+mongoose.connect(MONGODB_URI, {
+    useNewUrlParser: false,
+})
 const db = mongoose.connection
 
 // Database Connection Error/Success
@@ -31,6 +34,11 @@ app.use(methodOverride('_method'))
 app.use('/coins', coinsController)
 app.use('/users', usersController)
 app.use(express.static('public'))
+// app.use(session({
+//     secret: SESSION_SECRET,
+//     resave: false,
+//     saveUninitialized: false,
+// }))
 
 const PORT = process.env.PORT || 3000
 app.listen(PORT, ()=>{
