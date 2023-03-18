@@ -1,7 +1,7 @@
+require('dotenv').config()
 const express = require('express')
 const app = express();
 const methodOverride = require('method-override')
-require('dotenv').config()
 const Coin = require('./models/coin.js')
 const coinsController = require('./controllers/coins.js')
 const usersController = require('./controllers/users.js')
