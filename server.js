@@ -15,7 +15,7 @@ console.log(SESSION_SECRET)
 //MONGODB ATLAS Connection
 const mongoose = require('mongoose')
 mongoose.set('strictQuery', false)
-mongoose.connect(process.env.DATABASE_URL)
+mongoose.connect(process.env.DATABASE_URI)
 const db = mongoose.connection
 
 // Database Connection Error/Success
