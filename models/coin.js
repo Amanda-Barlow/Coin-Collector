@@ -6,6 +6,7 @@ const coinSchema = new mongoose.Schema({
     year: {type: Number, required: true},
     worth: {type: Number, required: false},
     tags: {type: String, required: false},
+    img: {type: String, required: false},
 })
 
 const Coin = mongoose.model('Coin', coinSchema);

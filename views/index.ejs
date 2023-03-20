@@ -1,28 +1,11 @@
 <%- include('./partials/header.ejs') %>
     <h1>$ COIN COLLECTOR $</h1>
-    <table>
-        <% for (let i=0; i < coins.length; i++) { %>
-            <tr>
-            <td>
-            <th scope= 'row'><a href='/coins/<%=coins[i].id%>'><%=coins[i].name%></a>
-            </td>
-            </th>
-            <td>
-            <th scope= 'row'><a href='/coins/<%=coins[i].id%>/edit'> Edit Coin </a>
-            </td>
-            </th>
-
-    <!-- ADD DELETE FORM HERE-->
-    <div>
-    <td>
-        <th scope= 'row'><form action='/coins/<%=coins[i].id%>?_method=DELETE' method='POST'>
-        <input type='submit' value='Delete'>
-        </form>
-        </td>
-        </th>
+    <div class="flex-container">
+        <div><% for (let i=0; i < coins.length; i++) { %>
+        <div><a href='/coins/<%=coins[i].id%>'><%=coins[i].name%></a>
+        <div><a href='/coins/<%=coins[i].id%>/edit'> Edit Coin </a>
+        <div><form action='/coins/<%=coins[i].id%>?_method=DELETE' method='POST'>
+        <div><input type='submit' value='Delete'>
     </div>
-
-        </tr>
-       <%}%>
-    </table>
+    <%}%>
 <%- include('./partials/footer.ejs') %>

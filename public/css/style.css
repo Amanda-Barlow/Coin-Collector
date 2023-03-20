@@ -3,16 +3,16 @@ nav{
   text-align: center;
 }
 
+.flex-container {
+display: flex;
+justify-content: flex-start;
+}
+
 body {
   background-image: url('Money-Jar.jpg');
   background-color:#cfe0c3;
   margin: 0;
   font-family:Georgia, 'Times New Roman', Times, serif;
-}
-
-div {
-  text-align: right;
-  align-items: right;
 }
 
 h1 {
