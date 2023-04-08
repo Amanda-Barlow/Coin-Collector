@@ -1,6 +1,8 @@
 const express = require('express');
 const router = express.Router()
 const Coin = require('../models/coin.js')
+const multer = require('multer')
+const upload = multer({dest: 'uploads/'})
 
 //ROUTES
 //INDEX 

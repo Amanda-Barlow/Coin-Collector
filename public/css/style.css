@@ -2,17 +2,43 @@ nav{
   margin: 1em;
   text-align: center;
 }
-
-.flex-container {
-display: flex;
-justify-content: flex-start;
-}
-
 body {
   background-image: url('Money-Jar.jpg');
   background-color:#cfe0c3;
-  margin: 0;
   font-family:Georgia, 'Times New Roman', Times, serif;
+}
+img {
+  width: 50%;
+  border-radius: 12px;
+  height: 150px;
+  object-fit:contain;
+}
+
+#container {
+  column-count: 3;
+  max-width:fit-content;
+  margin: 0 auto;
+  margin-top: 20vh;
+  }
+
+.card {
+  background-color: white;
+  border: 4px solid #386641;
+  padding: 4px;
+  border-radius: 12px;
+}
+
+.tag {
+  padding: 4px 8px;
+  border: 1px solid #e5eaed;
+  border-radius: 50px;
+  font-size: 12px;
+  font-weight: 600;
+  color: #788697;
+}
+
+.card__details {
+  padding: 8px 8px 8px 8px
 }
 
 h1 {
@@ -20,8 +46,6 @@ h1 {
   background-color: #386641;
   color:#cfe0c3 ;
   font-size: 50px;
-  margin-bottom: 1em;
-  padding: 1em;
   text-align: center;
 }
 
@@ -31,31 +55,13 @@ a {
   text-shadow: 1px 1px 1px #6A994E;
   font-size: 20px;
   padding: .25em;
-  margin: 1em;
+  margin: 2em;
 }
 
 a:hover {
   color: #F2E8CF;
 }
 
-li {
-  color: #BC4749;
-  text-decoration: none;
-  text-shadow: 1px 1px 1px #386641;
-  font-size: 20px;
-  padding: .25em;
-  margin: 1em;
-}
-
-li a {
-  color: #40798c;
-}
-tr {
-  color: #A7C957;
-  text-align: left;
-  font-size: 20px;
-
-}
 input[type=text] {
   padding: .3em;
 }

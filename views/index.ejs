@@ -1,11 +1,18 @@
 <%- include('./partials/header.ejs') %>
     <h1>$ COIN COLLECTOR $</h1>
-    <div class="flex-container">
-        <div><% for (let i=0; i < coins.length; i++) { %>
-        <div><a href='/coins/<%=coins[i].id%>'><%=coins[i].name%></a>
-        <div><a href='/coins/<%=coins[i].id%>/edit'> Edit Coin </a>
-        <div><form action='/coins/<%=coins[i].id%>?_method=DELETE' method='POST'>
-        <div><input type='submit' value='Delete'>
-    </div>
-    <%}%>
+    <body>
+    <div id="container">
+        <div class="card">
+        <div class="card__details">
+        <% for (let i=0; i < coins.length; i++) { %>
+        <a href='/coins/<%=coins[i].id%>'><%=coins[i].name%></a>
+        <a href='/coins/<%=coins[i].id%>/edit'> Edit Coin </a>
+        <img src="https://i.imgur.com/5XcQaXIt.png">
+        <form action='/coins/<%=coins[i].id%>?_method=DELETE' method='POST'></form>
+        <input type='submit' value='Delete'>
+
+    </body>     
+    <%}%>   
+    
+    
 <%- include('./partials/footer.ejs') %>
