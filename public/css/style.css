@@ -15,8 +15,9 @@ img {
 }
 
 #container {
-  column-count: 3;
-  max-width:fit-content;
+  column-count: 4;
+  column-gap: 20px;
+  max-width:min-content
   margin: 0 auto;
   margin-top: 20vh;
   }
