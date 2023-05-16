@@ -40,8 +40,3 @@ Stretch Goals
 - Developer will continue to work on allowing user to sign in and save their information
 - Developer will continue to work on allowing the user or others to give input or feedback about the coin
 
-<img src = 'wireframe1 Small.jpeg'>
-<img src = 'wireframe2 Small.jpeg'>
-<img src = 'wireframe3 Small.jpeg'>
-<img src = 'wireframe4 Small.jpeg'>
-￼
