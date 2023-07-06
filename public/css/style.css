@@ -15,11 +15,10 @@ img {
 }
 
 #container {
-  column-count: 4;
-  column-gap: 20px;
-  max-width:min-content
+  column-count: 1;
+  max-width:80%;
   margin: 0 auto;
-  margin-top: 20vh;
+  margin-top: 10vh;
   }
 
 .card {
@@ -66,7 +65,7 @@ a:hover {
 input[type=text] {
   padding: .3em;
 }
-
+delete
 input[type=submit], button {
   padding: .3em;
   color: #386641;

@@ -6,8 +6,10 @@
         <div class="card__details">
         <div><% for (let i=0; i < coins.length; i++) { %>
         <a href='/coins/<%=coins[i].id%>'><%=coins[i].name%></a>
+        <br />
         <a href='/coins/<%=coins[i].id%>/edit'>Edit</a>
-        <img src="https://i.imgur.com/5XcQaXIt.png">
+        <!-- <img src="https://i.imgur.com/5XcQaXIt.png"> -->
+        <br />
         <form action='/coins/<%=coins[i].id%>?_method=DELETE' method='POST'></form>
         <input type='submit' value='Delete'>
 <br>
